@@ -66,27 +66,27 @@ The following table describes the various endpoints (on the `PostmanEchoEndPoint
 
 | Method | URI (`PostmanEchoEndPoints`) | Response Handler |
 | --- | --- | --- |
-| GET | `RequestMethods.GetUri(query)` | `HttpResponseMessage.Content.ReadAsPostmanEchoMethodResponseAsync()`
-| POST | `RequestMethods.PostUri(query)` | `HttpResponseMessage.Content.ReadAsPostmanEchoMethodResponseAsync()`
-| PUT | `RequestMethods.PutUri(query)` | `HttpResponseMessage.Content.ReadAsPostmanEchoMethodResponseAsync()`
-| PATCH | `RequestMethods.PatchUri(query)` | `HttpResponseMessage.Content.ReadAsPostmanEchoMethodResponseAsync()`
-| DELETE | `RequestMethods.DeleteUri(query)` | `HttpResponseMessage.Content.ReadAsPostmanEchoMethodResponseAsync()`
-| GET | `Headers.RequestHeadersUri` | `HttpResponseMessage.Content.ReadAsPostmanEchoMethodResponseAsync()`
-| GET | `Headers.ResponseHeadersUri(query)` | `HttpResponseMessage.Content.ReadAsPostmanEchoResponseHeadersAsync()`
-| GET | `AuthMethods.BasicAuthUri` | `HttpResponseMessage.StatusCode`
-| GET | `AuthMethods.DigestAuthUri` | `HttpResponseMessage.StatusCode`
-| GET | `AuthMethods.HawkAuthUri(query)` | `HttpResponseMessage.StatusCode` and `HttpResponseMessage.Content.ReadIsHawkAuthSuccessfulAsync()`
-| GET | `AuthMethods.OAuth1Uri` | `HttpResponseMessage.StatusCode` and `HttpResponseMessage.Content.ReadAsPostmanEchoOAuth1FailureResponseAsync()`
-| GET | `Cookies.SetUri(cookies)` | `HttpResponseMessage.Content.ReadAsPostmanEchoCookiesResponseAsync()`
-| GET | `Cookies.GetUri` | `HttpResponseMessage.Content.ReadAsPostmanEchoCookiesResponseAsync()`
-| GET | `Cookies.DeleteUri(cookieNames)` | `HttpResponseMessage.Content.ReadAsPostmanEchoCookiesResponseAsync()`
-| GET | `Utilities.StatusCodeUri(int code)` | `HttpResponseMessage.StatusCode`
-| GET | `Utilities.StreamedResponseUri(length)` | `HttpResponseMessage`
-| GET | `Utilities.DelayResponseUri(seconds)` | `HttpResponseMessage`
-| GET | `Utilities.GetUtf8EncodedResponseUri` | `HttpResponseMessage.Content.ReadAsStringAsync()`
-| GET | `Utilities.GZipCompressedUri` | `HttpResponseMessage.Content.ReadAsPostmanEchoGZipResponseAsync()`
-| GET | `Utilities.DeflateCompressedUri` | `HttpResponseMessage.Content.ReadAsPostmanEchoDeflateResponseAsync()`
-| GET | `Utilities.IpAddressUri` | `HttpResponseMessage.Content.ReadAsPostmanEchoIpAddressAsync()`
+| GET | `RequestMethods.GetUri(query)` | `HttpResponseMessage.Content.ReadAsPostmanEchoMethodResponseAsync()` |
+| POST | `RequestMethods.PostUri(query)` | `HttpResponseMessage.Content.ReadAsPostmanEchoMethodResponseAsync()` |
+| PUT | `RequestMethods.PutUri(query)` | `HttpResponseMessage.Content.ReadAsPostmanEchoMethodResponseAsync()` |
+| PATCH | `RequestMethods.PatchUri(query)` | `HttpResponseMessage.Content.ReadAsPostmanEchoMethodResponseAsync()` |
+| DELETE | `RequestMethods.DeleteUri(query)` | `HttpResponseMessage.Content.ReadAsPostmanEchoMethodResponseAsync()` |
+| GET | `Headers.RequestHeadersUri` | `HttpResponseMessage.Content.ReadAsPostmanEchoMethodResponseAsync()` |
+| GET | `Headers.ResponseHeadersUri(query)` | `HttpResponseMessage.Content.ReadAsPostmanEchoResponseHeadersAsync()` |
+| GET | `AuthMethods.BasicAuthUri` | `HttpResponseMessage.StatusCode` |
+| GET | `AuthMethods.DigestAuthUri` | `HttpResponseMessage.StatusCode` |
+| GET | `AuthMethods.HawkAuthUri(query)` | `HttpResponseMessage.StatusCode` and `HttpResponseMessage.Content.ReadIsHawkAuthSuccessfulAsync()` |
+| GET | `AuthMethods.OAuth1Uri` | `HttpResponseMessage.StatusCode` and `HttpResponseMessage.Content.ReadAsPostmanEchoOAuth1FailureResponseAsync()` |
+| GET | `Cookies.SetUri(cookies)` | `HttpResponseMessage.Content.ReadAsPostmanEchoCookiesResponseAsync()` |
+| GET | `Cookies.GetUri` | `HttpResponseMessage.Content.ReadAsPostmanEchoCookiesResponseAsync()` |
+| GET | `Cookies.DeleteUri(cookieNames)` | `HttpResponseMessage.Content.ReadAsPostmanEchoCookiesResponseAsync()` |
+| GET | `Utilities.StatusCodeUri(int code)` | `HttpResponseMessage.StatusCode` |
+| GET | `Utilities.StreamedResponseUri(length)` | `HttpResponseMessage` |
+| GET | `Utilities.DelayResponseUri(seconds)` | `HttpResponseMessage` |
+| GET | `Utilities.GetUtf8EncodedResponseUri` | `HttpResponseMessage.Content.ReadAsStringAsync()` |
+| GET | `Utilities.GZipCompressedUri` | `HttpResponseMessage.Content.ReadAsPostmanEchoGZipResponseAsync()` |
+| GET | `Utilities.DeflateCompressedUri` | `HttpResponseMessage.Content.ReadAsPostmanEchoDeflateResponseAsync()` |
+| GET | `Utilities.IpAddressUri` | `HttpResponseMessage.Content.ReadAsPostmanEchoIpAddressAsync()` |
 
 See the implementation of `PostmanEchoClient` (in `ByteDev.PostmanEcho.IntTests` project) for more hints on how to use the API and handle the response using your `HttpClient`.
 
