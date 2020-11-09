@@ -7,10 +7,14 @@ namespace ByteDev.PostmanEcho.Json
     {
         public static string GetPropertyString(this JsonProperty source)
         {
-            if (source.Value.ValueKind != JsonValueKind.String)
+            if (source.Value.ValueKind == JsonValueKind.Null || 
+                source.Value.ValueKind == JsonValueKind.Undefined)
                 return null;
 
-            return source.Value.GetString();
+            if (source.Value.ValueKind == JsonValueKind.String)
+                return source.Value.GetString();
+
+            return source.Value.GetRawText();
         }
 
         public static bool GetPropertyBool(this JsonProperty source)
@@ -23,7 +27,8 @@ namespace ByteDev.PostmanEcho.Json
 
         public static IDictionary<string, string> GetPropertyDictionary(this JsonProperty source)
         {
-            if (source.Value.ValueKind == JsonValueKind.Undefined)
+            if (source.Value.ValueKind == JsonValueKind.Null || 
+                source.Value.ValueKind == JsonValueKind.Undefined)
                 return new Dictionary<string, string>();
 
             return source.Value.GetJsonAs<Dictionary<string, string>>();

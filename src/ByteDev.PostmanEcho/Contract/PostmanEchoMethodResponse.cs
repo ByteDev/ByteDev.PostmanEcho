@@ -28,7 +28,7 @@ namespace ByteDev.PostmanEcho.Contract
         }
 
         /// <summary>
-        /// Query string name values sent in the request.
+        /// Query string name values sent in the request (args JSON field).
         /// </summary>
         public IDictionary<string, string> QueryString
         {
@@ -37,7 +37,7 @@ namespace ByteDev.PostmanEcho.Contract
         }
 
         /// <summary>
-        /// Body content sent in the request.
+        /// Body content sent in the request (data JSON field).
         /// </summary>
         public string Body { get; }
 
